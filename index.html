@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MARWANALEX3 - إدارة العربيات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🚗 MARWANALEX3 — إدارة العربيات</h1>
+    <div class="userInfo">
+      <span id="currentUser">غير مسجل</span>
+      &nbsp;|&nbsp;
+      <span id="nowTime" class="small"></span>
+      &nbsp;|&nbsp;
+      <button id="logoutBtn" class="ghost" style="display:none">تسجيل خروج</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- تسجيل الدخول -->
+    <section class="card" id="authCard">
+      <h3>تسجيل الدخول / اختيار المستخدم</h3>
+      <div class="row">
+        <div class="col">
+          <input id="loginUser" placeholder="اسم المستخدم" />
+        </div>
+        <div class="col">
+          <input id="loginPass" type="password" placeholder="كلمة السر" />
+        </div>
+        <div class="col" style="flex:0 0 auto">
+          <button id="loginBtn" class="primary">دخول</button>
+        </div>
+        <div class="col" style="flex:0 0 auto">
+          <button id="initUsersBtn" class="ghost">تهيئة اليوزرات (مرّة واحدة)</button>
+        </div>
+      </div>
+      <div class="small">استخدم تهيئة اليوزرات أول مرة فقط لكتابة الحسابات في قاعدة البيانات.</div>
+    </section>
+
+    <!-- إضافة عربية -->
+    <section class="card" id="addCard" style="display:none">
+      <h3>إضافة عربية جديدة</h3>
+      <div class="row">
+        <input id="carName" class="col" placeholder="اسم العربية" />
+        <input id="carNumber" class="col" placeholder="رقم العربية" />
+        <input id="carLetters" class="col" placeholder="الحروف" />
+        <select id="carCollege" class="col">
+          <option value="">اختر الكلية</option>
+          <option>كلية تجارة ترام</option>
+          <option>كلية آداب</option>
+          <option>كلية تربية</option>
+          <option>كلية سياحة</option>
+          <option>تجارة بورسعيد</option>
+        </select>
+        <div style="flex:0 0 150px">
+          <button id="addBtn" class="primary">إضافة</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- البحث والإحصائيات -->
+    <section class="card">
+      <div class="searchRow">
+        <div class="controls" style="flex:1">
+          <input id="searchInput" placeholder="ابحث بالاسم أو الرقم أو الكلية..." class="searchInput" />
+          <button id="searchBtn" class="ghost">بحث</button>
+          <button id="clearSearchBtn" class="ghost">مسح البحث</button>
+        </div>
+        <div style="text-align:left">
+          <strong>عدد السجلات:</strong> <span id="totalCars">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- الجدول -->
+    <section class="card">
+      <div class="tableHeader">
+        <h3>قائمة العربيات</h3>
+        <div>
+          <button id="exportPDF" class="primary">📄 تصدير إلى PDF</button>
+        </div>
+      </div>
+      <table id="carsTable">
+        <thead>
+          <tr>
+            <th>الاسم</th>
+            <th>الرقم</th>
+            <th>الحروف</th>
+            <th>الكلية</th>
+            <th>من سجّل / الوقت</th>
+            <th>الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody id="carsTbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="small">© 2025 MARWANALEX3 — جميع الحقوق محفوظة</footer>
+
+  <!-- مكتبة jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- سكريبت التطبيق -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

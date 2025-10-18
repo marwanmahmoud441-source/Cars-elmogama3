@@ -1,0 +1,23 @@
+body{font-family:Tajawal,system-ui,Arial;direction:rtl;text-align:right;background:#f6f8fb;margin:0;padding:0}
+header{background:#273c75;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h1{margin:0;font-size:18px}
+header .userInfo{font-size:14px;margin-top:5px}
+main{padding:16px;max-width:980px;margin:18px auto}
+.card{background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06);padding:14px;margin-bottom:14px}
+input,select,button{padding:10px;border-radius:8px;border:1px solid #dcdde1;font-size:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.col{flex:1;min-width:160px}
+button.primary{background:#273c75;color:#fff;border:none;cursor:pointer}
+button.primary:hover{background:#40739e}
+button.danger{background:#c23616;color:#fff;border:none;cursor:pointer}
+button.ghost{background:transparent;border:1px solid #dcdde1;cursor:pointer}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th,td{padding:10px;border-bottom:1px solid #eef0f3;text-align:right}
+th{background:#f1f3f7}
+.small{font-size:12px;color:#666}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.searchInput{flex:1}
+footer{padding:10px;text-align:center;color:#888;font-size:13px}
+.tableHeader{display:flex;justify-content:space-between;align-items:center}
+.searchRow{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+@media (max-width:640px){header{flex-direction:column;align-items:flex-start} .row{flex-direction:column}}
